@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header h1 {
+    font-weight: 800;
+}
+
+.hero h2,
+.section h3 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero p,
+.section p,
+.section ul li {
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.values ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.team-card img {
+    margin-bottom: 10px;
+}
+
+.team-card h5 {
+    font-weight: 700;
+}
+
+.team-card p {
+    font-size: 0.9rem;
+}
+
+img.rounded {
+    border-radius: 8px;
+}
+
+
+h2{
+    color: white;
+}
+
+img{
+    width: 40vh;
+    max-height: 400px !important;
+}

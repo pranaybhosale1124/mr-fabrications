@@ -31,3 +31,26 @@ function scrollToFooter() {
     document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
     highlightContactInfo();
 }
+
+function highlightActiveTab() {
+    const currentHash = location.hash || "#/home";
+    const links = document.querySelectorAll("nav a");
+
+    links.forEach(link => {
+        if (link.getAttribute("href") === currentHash) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+}
+
+window.addEventListener("hashchange", () => {
+    loadPage();
+    highlightActiveTab();
+});
+
+window.addEventListener("load", () => {
+    loadPage();
+    highlightActiveTab();
+});

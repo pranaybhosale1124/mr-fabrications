@@ -269,3 +269,8 @@ img{
 .about-text{
     color: #C0C0C0;
 }
+
+nav a.active {
+    /* color: yellow; */
+    border-bottom: 2px solid white;
+}

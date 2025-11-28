@@ -274,3 +274,20 @@ nav a.active {
     /* color: yellow; */
     border-bottom: 2px solid white;
 }
+
+a:hover {
+    text-decoration: none !important; /* removes underline */
+    color: #ddd !important;
+}
+
+#content {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+#content.show {
+    opacity: 1;
+    transform: translateY(0px);
+}
+

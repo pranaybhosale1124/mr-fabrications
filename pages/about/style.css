@@ -37,11 +37,12 @@ header h1 {
     font-size: 0.9rem;
 }
 
-img.rounded {
-    border-radius: 8px;
-}
-
 
 h2{
     color: white;
+}
+
+
+img.rounded{
+    border-radius: 0px;
 }

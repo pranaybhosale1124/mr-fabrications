@@ -11,15 +11,27 @@ function loadPage() {
     let path = location.hash.replace("#", "") || "/home";
     const file = routes[path];
 
+    const contentDiv = document.getElementById("content");
+
+    // Start fade-out before loading new page
+    contentDiv.classList.remove("show");
+
     fetch(file)
         .then(response => response.text())
         .then(content => {
-            document.getElementById("content").innerHTML = content;
+            contentDiv.innerHTML = content;
+
+            // Fade-in after content loads
+            setTimeout(() => {
+                contentDiv.classList.add("show");
+            }, 50);
         })
         .catch(() => {
-            document.getElementById("content").innerHTML = "<h2>404 - Page Not Found</h2>";
+            contentDiv.innerHTML = "<h2>404 - Page Not Found</h2>";
+            contentDiv.classList.add("show");
         });
 }
+
 
 // Listen for hash URL changes
 window.addEventListener("hashchange", loadPage);
